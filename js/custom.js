@@ -1,15 +1,3 @@
-// Closes the sidebar menu
-$("#menu-close").click(function(e) {
-  e.preventDefault();
-  $("#sidebar-wrapper").toggleClass("active");
-});
-
-// Opens the sidebar menu
-$("#menu-toggle").click(function(e) {
-  e.preventDefault();
-  $("#sidebar-wrapper").toggleClass("active");
-});
-
 // Scrolls to the selected menu item on the page
 $(function() {
   $('a[href*=#]:not([href=#])').click(function() {
@@ -27,14 +15,29 @@ $(function() {
   });
 });
 
-// Map scrolling behaviour
+// Change navbar style on scroll
 $(document).ready(function() {
-  $('#map_iframe').addClass('scrolloff');
-  $('#map').on('click', function () {
-    $('#map_iframe').removeClass('scrolloff');
-  });
+  var mainNav = $("#mainNav");
+  var collapseElement = document.getElementById('bs-example-navbar-collapse-1');
 
-  $('#map_iframe').mouseleave(function  () {
-    $('#map_iframe').addClass('scrolloff');
-  });
+  // Function to add/remove class
+  var navbarCollapse = function() {
+    if (mainNav.offset().top > 250) {
+      mainNav.addClass("bg-dark");
+    } else {
+      // Only remove bg-dark if the navbar is not collapsed
+      if (!$(collapseElement).hasClass('show')) {
+        mainNav.removeClass("bg-dark");
+      }
+    }
+  };
+  // Collapse now if page is not at top
+  navbarCollapse();
+  // Collapse the navbar when page is scrolled
+  $(window).scroll(navbarCollapse);
+
+  // Add dark background when navbar is expanded on mobile
+  $(collapseElement).on('show.bs.collapse', function () { mainNav.addClass('bg-dark'); });
+  // Remove dark background when navbar is collapsed (if not scrolled)
+  $(collapseElement).on('hide.bs.collapse', function () { if (mainNav.offset().top <= 250) { mainNav.removeClass('bg-dark'); } });
 });
