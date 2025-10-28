@@ -1,5 +1,5 @@
 ---
-title: My Services & Offerings
+title: Services & Offerings
 permalink: /offerings/
 layout: page
 ---
