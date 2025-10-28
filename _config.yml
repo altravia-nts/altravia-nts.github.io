@@ -1,19 +1,18 @@
 # Site settings
-title: Altravia NTS
+title: AltraVia NTS
+subtitle: Guidance for Your Biomedical Career in Europe
 email: neemats@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Personal website of Neema T S, offering mentorship, career coaching, and application support for biomedical students pursuing studies in Europe.
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "" # the base hostname & protocol for your site
+url: "https://altravia-nts.github.io" # the base hostname & protocol for your site
 
 # User setting
 owner: Neema T S
 email: 
 facebook_username:
 twitter_username:
-github_username: altravia
+github_username: altravia-nts
 address:
   - line:
   - line:
@@ -21,8 +20,9 @@ address:
 telephone:
 copyright:
 
-# API settings
-google_api_key:
 
 # Build settings
 markdown: kramdown
+
+include:
+  - "_content"

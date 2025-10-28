@@ -1,0 +1,10 @@
+<section id="content" class="content">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2">
+      {% capture offerings_content %}
+      {% include_relative _content/offerings.md %}
+      {% endcapture %}
+      {{ offerings_content | markdownify }}
+    </div>
+  </div>
+</section>

@@ -1,21 +1,21 @@
 <footer>
   <div class="container">
-    <div class="row">
+    <div class="row justify-content-center">
       <div class="col-lg-10 col-lg-offset-1 text-center">
         <h4><strong>{{ site.owner }}</strong>
         </h4>
-        <p>
+        <!-- <p>
           {% for address in site.address %}
           {{ address.line }}<br>
           {% endfor %}
-        </p>
+        </p> -->
         <ul class="list-unstyled">
           <li><i class="fa fa-phone fa-fw"></i> {{ site.telephone }}</li>
-          <li><i class="fa fa-envelope-o fa-fw"></i>  <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+          <li><i class="fa fa-envelope fa-fw"></i>  <a href="mailto:{{ site.email }}">{{ site.email }}</a>
           </li>
         </ul>
         <br>
-        <ul class="list-inline">
+        <!-- <ul class="list-inline">
           <li>
             <a href="https://facebook.com/{{ site.facebook_username }}"><i class="fa fa-facebook fa-fw fa-3x"></i></a>
           </li>
@@ -25,8 +25,8 @@
           <li>
             <a href="https://github.com/{{ site.github_username }}"><i class="fa fa-github fa-fw fa-3x"></i></a>
           </li>
-        </ul>
-        <hr class="small">
+        </ul> -->
+        <hr class="small div-center">
         <p class="text-muted">Copyright &copy; {{ site.copyright }} 20{{ site.time | date: '%y' }}</p>
       </div>
     </div>

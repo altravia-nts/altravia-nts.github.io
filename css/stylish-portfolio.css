@@ -31,6 +31,15 @@ body {
 
 /* Custom Button Styles */
 
+.btn {
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
 .btn-dark {
     border-radius: 0;
     color: #fff;
@@ -155,11 +164,46 @@ hr.small {
     position: relative;
     width: 100%;
     height: 100%;
-    background: url(../img/bg.jpg) no-repeat center center scroll;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
+    color: #fff;
+    overflow: hidden; /* Ensures the zooming image doesn't overflow the header area */
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    z-index: -1; /* Place it behind everything */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url(https://images.unsplash.com/photo-1758242867442-ba3f5ceadae9?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1740) no-repeat center center;
     background-size: cover;
-    -o-background-size: cover;
+    animation: zoomIn 10s ease-in-out infinite alternate;
+}
+
+.header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.6) 100%);
+    z-index: 0; /* Sits on top of the image but behind the text */
+}
+
+.header .text-vertical-center {
+    position: relative;
+    z-index: 1; /* Ensures text is on top of the overlay */
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
 }
 
 /* About */
@@ -175,7 +219,16 @@ hr.small {
 }
 
 .service-item {
-    margin-bottom: 30px;
+  padding: 30px 20px;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+  height: -webkit-fill-available;
+}
+
+.service-item:hover {
+  transform: translateY(-10px);
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 /* Callout */
@@ -185,7 +238,7 @@ hr.small {
     width: 100%;
     height: 400px;
     color: #fff;
-    background: url(../img/callout.jpg) no-repeat center center scroll;
+    background: url(https://plus.unsplash.com/premium_photo-1689248943653-37ab70151a9f?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1740) no-repeat center center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -241,4 +294,46 @@ hr.small {
 
 footer {
     padding: 100px 0;
+}
+
+:root {
+  --bs-primary-rgb: 51, 122, 183; /* RGB for #337ab7 */
+  --bs-body-bg: #f8f9fa;
+}
+
+.bg-primary {
+    color: #fff !important;
+    background-color: #337ab7 !important;
+}
+
+.div-center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Custom styles for content pages */
+#page-content p {
+    line-height: 1.7;
+}
+
+#page-content h2,
+#page-content h3 {
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Top Navigation Bar on Scroll */
+#mainNav {
+  display: none;
+}
+
+#mainNav.navbar-scrolled {
+  display: block;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  transition: background-color 200ms linear;
+}
+
+/* Always show nav on sub-pages */
+#mainNav.page-nav {
+  display: block;
 }
