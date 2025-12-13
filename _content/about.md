@@ -8,7 +8,7 @@
       </div>
 <div class="col-lg-9 text-start">
 <p class="fw-bold pt-1">I’ve been where you are.</p>
-Starting out in biomedical studie, I remember the uncertainty-choosing the right path, wondering what comes next. I completed my undergraduate degree in Electronics and Biomedical Engineering from Model Engineering College, Thrikkakara, Kochi, graduating in 2019. After that, I was determined to pursue a master’s degree abroad-but I had no idea where to begin.<br>
+Starting out in biomedical studi, I remember the uncertainty-choosing the right path, wondering what comes next. I completed my undergraduate degree in Electronics and Biomedical Engineering from Model Engineering College, Thrikkakara, Kochi, graduating in 2019. After that, I was determined to pursue a master’s degree abroad-but I had no idea where to begin.<br>
 
 From stem cell research to medical robotics, the biomedical field offers countless specializations, and I was overwhelmed by the possibilities. After an year of hands-on experience as a Project Associate at IIT Madras, working on biomedical sensors, eventually I joined a joint master’s program in Bionics Engineering, specializing in BioRobotics, at the University of Pisa and the Sant’Anna School of Advanced Studies—two institutions with deep scientific legacies. The University of Pisa, founded in 1343, has hosted pioneers like Leonardo Fibonacci and Galileo Galilei, while Sant’Anna is renowned for cutting-edge research in robotics and biomedical innovation.<br>
 
