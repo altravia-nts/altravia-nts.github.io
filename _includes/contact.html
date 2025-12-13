@@ -1,10 +1,19 @@
-<section id="contact" class="contact bg-light">
+<!-- Contact Section Start -->
+<section id="contact" class="contact bg-light py-5">
   <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-lg-8 text-center">
-        <h2>Get in Touch</h2>
-        <hr class="small div-center">
-        <p class="lead mb-5">Have a question or want to work together? Send me a message!</p>
+    <!-- Section Heading -->
+    <h2 class="text-center">Get in Touch</h2>
+    <hr class="small div-center mb-5">
+    <p class="lead text-center mb-5">Have a question or want to work together? Send me a message!</p>
+
+    <div class="row justify-content-center align-items-center">
+      <!-- Left Column: Profile Image -->
+      <div class="col-lg-3 text-center mb-4 mb-lg-0">
+        <img class="img-fluid rounded-circle" src="/img/Neema.jpg" alt="Profile Picture">
+      </div>
+
+      <!-- Right Column: Contact Form -->
+      <div class="col-lg-8">
         <form action="https://formspree.io/f/mvgeldby" method="POST">
           <div class="row">
             <div class="col-md-6">
@@ -20,11 +29,15 @@
               </div>
             </div>
           </div>
+
           <div class="form-floating mb-3">
             <textarea name="message" class="form-control" placeholder="Leave a message here" id="message" style="height: 10rem" required></textarea>
             <label for="message">Message</label>
           </div>
-          <button class="btn btn-dark btn-xl" type="submit">Send Message</button>
+
+          <div class="text-center">
+            <button class="btn btn-dark btn-xl" type="submit">Send Message</button>
+          </div>
         </form>
       </div>
     </div>
