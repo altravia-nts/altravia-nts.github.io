@@ -11,7 +11,10 @@ body {
   width: 100%;
   height: 100%;
 }
-
+/* Global scroll padding to account for fixed navbar */
+html {
+  scroll-padding-top: 80px; /* equal to navbar height */
+}
 body {
   font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
@@ -350,14 +353,14 @@ text-decoration: none;
 
 .about {
   padding: 50px 0;
-  scroll-margin-top: 30px;
+  
 }
 
 /* Services */
 
 .services {
   padding: 50px 0;
-  scroll-margin-top: 30px;
+ 
 }
 
 .service-item {
@@ -382,7 +385,7 @@ text-decoration: none;
   color: #fff;
   background: url("../img/robot.jpg")
     no-repeat center center scroll;
-  opacity: 0.3; */
+  opacity: 0.3; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -393,7 +396,7 @@ text-decoration: none;
 
 .portfolio {
   padding: 50px 0;
-  scroll-margin-top: 30px;
+  
 }
 
 .portfolio-item {
@@ -412,12 +415,19 @@ text-decoration: none;
 
 .call-to-action {
   padding: 50px 0;
-  scroll-margin-top: 30px;
+  /*scroll-margin-top: 30px;*/
 }
 
 .call-to-action .btn {
   margin: 10px;
-  scroll-margin-top: 30px;
+  /*scroll-margin-top: 30px;*/
+}
+
+.about,
+.services,
+.portfolio,
+.contact {
+  scroll-margin-top: 80px; /* equal to navbar height */
 }
 
 /* Map */
