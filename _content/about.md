@@ -8,7 +8,7 @@
   <div class="col-lg-9 text-start">
     <h2 style="font-weight: 700;">Welcome to AltraVia</h2>
     <p>
-      I am Neema Tharayil Salim, founder of AltraVia. My mission is to empower biomedical aspirants to explore opportunities in higher education and professional careers. I hold a bachelor’s degree in Biomedical Engineering and earned a fully funded merit‑based scholarship to pursue my master’s in Bionics Engineering, specializing in Medical Robotics, at the University of Pisa and Scuola Superiore Sant’Anna in Italy. Currently, I work as a System Test Engineer in a German medical robotics company. My objective is to share my experience to guide, inspire, and support the next generation of biomedical professionals — helping them build confident careers and seize opportunities worldwide.
+      I am Neema Tharayil Salim, founder of AltraVia. My mission is to empower biomedical aspirants to explore opportunities in higher education and professional careers. I hold a bachelor’s degree in Biomedical Engineering and earned a fully funded merit‑based scholarship to pursue my master’s in Bionics Engineering, specializing in Medical Robotics, at the University of Pisa and Scuola Superiore Sant’Anna in Italy. Currently, I work as a System Test Engineer in a German medical robotics company. My objective is to share my experience to guide, inspire, and support the next generation of biomedical professionals - helping them build confident careers and seize opportunities worldwide.
     </p>
   </div>
 </div>

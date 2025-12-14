@@ -379,6 +379,31 @@ text-decoration: none;
 /* Callout */
 
 .callout {
+  position: relative;
+  display: table;
+  width: 100%;
+  height: 400px;
+  color: #000; /* keep text solid black */
+  background: url("../img/robot.jpg") no-repeat center center scroll;
+  background-size: cover;
+}
+
+/* Add overlay for transparency */
+.callout::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(255, 255, 255, 0.7); /* white overlay, 70% opaque */
+  z-index: 0;
+}
+
+/* Keep text above overlay */
+.callout * {
+  position: relative;
+  z-index: 1;
+}
+
+/*.callout {
   display: table;
   width: 100%;
   height: 400px;
@@ -390,7 +415,7 @@ text-decoration: none;
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
-}
+}*/
 
 /* Portfolio */
 
