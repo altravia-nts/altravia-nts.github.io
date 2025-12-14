@@ -5,7 +5,7 @@ email: neemats@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   Personal website of Neema T S, offering mentorship, career coaching, and application support for biomedical students pursuing studies in Europe.
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "https://altravia-nts.github.io" # the base hostname & protocol for your site
+url: "https://altraviants.org" # the base hostname & protocol for your site
 
 # User setting
 owner: Neema T S
@@ -25,4 +25,5 @@ copyright:
 markdown: kramdown
 
 include:
+
   - "_content"
