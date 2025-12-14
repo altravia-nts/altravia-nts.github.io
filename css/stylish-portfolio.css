@@ -382,7 +382,7 @@ text-decoration: none;
   color: #fff;
   background: url("../img/robot.jpg")
     no-repeat center center scroll;
-  /*opacity: 0.3; */
+  opacity: 0.3; */
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
