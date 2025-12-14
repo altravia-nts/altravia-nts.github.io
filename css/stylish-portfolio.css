@@ -250,7 +250,7 @@ text-decoration: none;
   content: "";
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: url("../img/pisa.jpg") no-repeat center center;
+  background: url("../img/bg.jpg") no-repeat center center;
   background-size: cover;     /* or contain if you want smaller */
   opacity: 0.3;               /* transparency level (adjust 0.2–0.5 as needed) */
   z-index: -1;                /* keep image behind text */
@@ -283,7 +283,7 @@ text-decoration: none;
   font-size: 1rem;
   border-radius: 4px;
   text-decoration: none;
-  background-color: #fc7c05; /* coral orange */
+  background-color: #337ab7; /* coral orange */
   color: #fff;
   border: none;
   transition: background-color 0.3s ease;
@@ -291,7 +291,7 @@ text-decoration: none;
 }
 
 .btn-custom:hover {
-  background-color: #ff6600; /* deeper orange on hover */
+  background-color: #337ab7; /* deeper orange on hover */
 }
 
 
@@ -350,12 +350,14 @@ text-decoration: none;
 
 .about {
   padding: 50px 0;
+  scroll-margin-top: 30px;
 }
 
 /* Services */
 
 .services {
   padding: 50px 0;
+  scroll-margin-top: 30px;
 }
 
 .service-item {
@@ -390,6 +392,7 @@ text-decoration: none;
 
 .portfolio {
   padding: 50px 0;
+  scroll-margin-top: 30px;
 }
 
 .portfolio-item {
@@ -408,6 +411,7 @@ text-decoration: none;
 
 .call-to-action {
   padding: 50px 0;
+  scroll-margin-top: 30px;
 }
 
 .call-to-action .btn {
@@ -430,6 +434,11 @@ text-decoration: none;
 .scrolloff {
   pointer-events: none;
 }
+/* Contact section */
+.contact {
+  padding: 50px 0;
+  scroll-margin-top: 80px;
+}
 
 /* Footer */
 
@@ -444,7 +453,7 @@ footer {
 
 .bg-primary {
   color: #fff !important;
-  background-color: #fc7c05 !important;
+  background-color: #337ab7 !important;
 }
 
 .div-center {
@@ -490,5 +499,5 @@ footer {
 }
 
 #mainNav .nav-link:hover {
-  color: #ff7f50 !important;    /* orange hover to match your button */
+  color: #337ab7!important;    /* orange hover to match your button */
 }
