@@ -380,7 +380,7 @@ text-decoration: none;
   width: 100%;
   height: 400px;
   color: #fff;
-  background: url("../img/front robot.jpg")
+  background: url("../img/robot.jpg")
     no-repeat center center scroll;
   /*opacity: 0.3; */
   -webkit-background-size: cover;
