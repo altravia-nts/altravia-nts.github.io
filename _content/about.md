@@ -8,11 +8,7 @@
       </div>
 <div class="col-lg-9 text-start">
 <p class="fw-bold pt-1">I’ve been where yo.</p>
-Starting out in biomedical studi, I remember the uncertainty-choosing the right path, wondering what comes next. I completed my undergraduate degree in Electronics and Biomedical Engineering from Model Engineering College, Thrikkakara, Kochi, graduating in 2019. After that, I was determined to pursue a master’s degree abroad-but I had no idea where to begin.<br>
-
-From stem cell research to medical robotics, the biomedical field offers countless specializations, and I was overwhelmed by the possibilities. After an year of hands-on experience as a Project Associate at IIT Madras, working on biomedical sensors, eventually I joined a joint master’s program in Bionics Engineering, specializing in BioRobotics, at the University of Pisa and the Sant’Anna School of Advanced Studies—two institutions with deep scientific legacies. The University of Pisa, founded in 1343, has hosted pioneers like Leonardo Fibonacci and Galileo Galilei, while Sant’Anna is renowned for cutting-edge research in robotics and biomedical innovation.<br>
-
-That journey—from confusion to clarity—is what I bring to our mentorship sessions. These aren’t just generic tips—they’re shaped by the same questions I once had, and the lessons I learned along the way. Whether you’re exploring options or planning your next move, I’ll help you find the right direction.
-
+Welcome to AltraVia.
+I am Neema Tharayil Salim, founder of AltraVia, and my mission is to empower biomedical aspirants to transform uncertainty into opportunity. I hold a bachelor’s degree in Biomedical Engineering and completed a fully funded master’s in Bionics Engineering in Italy through a prestigious merit scholarship, specializing in medical robotics. Currently, I work as a System Test Engineer in Germany’s medical robotics industry. My objective is to share my experience to guide, mentor, and inspire the next generation of biomedical professionals — helping them build confident careers and seize opportunities worldwide.
 </div>
 </div>
