@@ -1,10 +1,10 @@
 # Site settings
 title: AltraVia 
-subtitle: "From Aspiration to Achievement: Biomedical Careers in India and Abroad"
+subtitle: "Your gateway to biomedical careers and study abroad opportunities"
 email: info@altraviants.org
 description: > # this means to ignore newlines until "baseurl:"
-    Empowering biomedical journeys across education, research, and careers - bridging aspirations with opportunities in India and worldwide.
-    Book your free consultation today.
+    Mentoring biomedical aspirants to explore higher studies, research, internships, and career opportunities in India and Europe.
+    Book your free consultation now.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://altraviants.org" # the base hostname & protocol for your site
 
