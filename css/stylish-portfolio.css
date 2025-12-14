@@ -250,7 +250,7 @@ text-decoration: none;
   content: "";
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: url("../img/bg.jpg") no-repeat center center;
+  background: url("../img/pisa.jpg") no-repeat center center;
   background-size: cover;     /* or contain if you want smaller */
   opacity: 0.3;               /* transparency level (adjust 0.2–0.5 as needed) */
   z-index: -1;                /* keep image behind text */
@@ -283,7 +283,7 @@ text-decoration: none;
   font-size: 1rem;
   border-radius: 4px;
   text-decoration: none;
-  background-color: #ff7f50; /* coral orange */
+  background-color: #fc7c05; /* coral orange */
   color: #fff;
   border: none;
   transition: background-color 0.3s ease;
@@ -444,7 +444,7 @@ footer {
 
 .bg-primary {
   color: #fff !important;
-  background-color: #337ab7 !important;
+  background-color: #fc7c05 !important;
 }
 
 .div-center {
