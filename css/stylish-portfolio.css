@@ -258,14 +258,14 @@ text-decoration: none;
 
 /* Make brand/title larger */
 .header-text h1 {
-  font-size: 3.5rem;   /* increase size */
+  font-size: 4.5rem;   /* increase size */
   font-weight: 700;    /* bold for emphasis */
   margin-bottom: 25px;
 }
 
 /* Subtitle spacing */
 .header-text .subtitle {
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   margin-bottom: 20px;
 }
 
@@ -283,7 +283,7 @@ text-decoration: none;
   font-size: 1rem;
   border-radius: 4px;
   text-decoration: none;
-  background-color: #fc7c05; /* coral orange */
+  background-color: #337ab7; /* coral orange */
   color: #fff;
   border: none;
   transition: background-color 0.3s ease;
