@@ -231,7 +231,8 @@ text-decoration: none;
   height: 100%;
 }
 
-/* Left side: text with cream background */
+
+/* Left side: text with cream background + image */
 .header-text {
   flex: 1.2;
   display: flex;
@@ -239,8 +240,20 @@ text-decoration: none;
   justify-content: center;   /* vertical center */
   align-items: center;       /* horizontal center */
   padding: 60px;
-  /*background-color: #fdf5e6; /* light cream */
   text-align: center;        /* center text alignment */
+  position: relative;        /* allow ::before overlay */
+  z-index: 1;                /* keep text above background */
+}
+
+/* Background image with transparency */
+.header-text::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: url("../img/bg.jpg") no-repeat center center;
+  background-size: cover;     /* or contain if you want smaller */
+  opacity: 0.3;               /* transparency level (adjust 0.2–0.5 as needed) */
+  z-index: -1;                /* keep image behind text */
 }
 
 /* Make brand/title larger */
