@@ -495,7 +495,10 @@ footer p.text-muted {
 
 footer {
   padding: 100px 0;
+  background-color: #000; /* solid black background */
+  color: #fff;            /* optional: makes text white for contrast */
 }
+
 
 :root {
   --bs-primary-rgb: 51, 122, 183; 
