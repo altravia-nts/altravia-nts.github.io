@@ -285,7 +285,7 @@ hr.small {
   display: block;
   width: 80%;   /* reduce size */
   height: 80%;
-  background: url("your-image.jpg") no-repeat center center;
+  background: url("../img/front bg.jpg")no-repeat center center;
   background-size: contain;
   animation: zoomIn 10s ease-in-out infinite alternate;
 }
