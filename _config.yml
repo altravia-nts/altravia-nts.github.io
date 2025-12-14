@@ -9,8 +9,8 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://altraviants.org" # the base hostname & protocol for your site
 
 # User setting
-owner: Neema T S
-email: 
+owner: Neema Tharayil Salim
+email: info@altraviants.org
 facebook_username:
 twitter_username:
 github_username: altravia-nts
@@ -18,8 +18,8 @@ address:
   - line:
   - line:
   # Feel free to add more lines here 
-telephone:
-copyright:
+telephone: +49 15565799352
+copyright: AltraVia  
 
 
 # Build settings

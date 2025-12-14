@@ -10,9 +10,14 @@
           {% endfor %}
         </p> -->
         <ul class="list-unstyled">
-          <li><i class="fa fa-phone fa-fw"></i> {{ site.telephone }}</li>
-          <li><i class="fa fa-envelope fa-fw"></i>  <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+          <!--<li><i class="fa fa-phone fa-fw"></i> {{ site.telephone }}</li>-->
+          <li><i class="fa fa-envelope fa-fw"></i> 
+            <a href="mailto:{{ site.email }}">{{ site.email }}</a>
           </li>
+          <li><i class="fa fa-whatsapp fa-fw"></i>
+            <a href="https://wa.me/49123456789">+49 123 456789</a>
+          </li>
+
         </ul>
         <br>
         <!-- <ul class="list-inline">
@@ -27,7 +32,9 @@
           </li>
         </ul> -->
         <hr class="small div-center">
-        <p class="text-muted">Copyright &copy; {{ site.copyright }} 20{{ site.time | date: '%y' }}</p>
+        <p class="text-muted">Copyright © {{ site.time | date: '%Y' }} AltraVia, All rights reserved. Powered by AltraVia.
+        </p>
+
       </div>
     </div>
   </div>

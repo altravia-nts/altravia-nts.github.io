@@ -440,14 +440,66 @@ text-decoration: none;
   scroll-margin-top: 80px;
 }
 
+
+
+
+
 /* Footer */
 
+/* Footer */
+footer {
+  padding: 100px 0;
+  background-color: #000;   /* solid black block */
+  color: #fff;              /* white text for contrast */
+  text-align: center;       /* center all content */
+}
+
+/* Footer headings */
+footer h4 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+/* Footer links */
+footer a {
+  color:#337ab7;           /* coral orange links */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #337ab7;           /* deeper orange on hover */
+}
+
+/* Footer icons */
+footer i {
+  margin-right: 8px;
+  color: #337ab7;           /* match brand accent */
+}
+
+/* Divider line */
+footer hr.small {
+  border-color: #337ab7;    /* orange accent line */
+  max-width: 120px;
+  margin: 20px auto;
+}
+
+/* Copyright text */
+footer p.text-muted {
+  font-size: 0.9rem;
+  color: #ccc;              /* lighter gray for subtlety */
+  margin-top: 20px;
+}
+
+
+/*
 footer {
   padding: 100px 0;
 }
 
 :root {
-  --bs-primary-rgb: 51, 122, 183; /* RGB for #337ab7 */
+  --bs-primary-rgb: 51, 122, 183; 
   --bs-body-bg: #f8f9fa;
 }
 
@@ -459,7 +511,7 @@ footer {
 .div-center {
   margin-left: auto;
   margin-right: auto;
-}
+}*/
 
 /* Custom styles for content pages */
 #page-content p {
