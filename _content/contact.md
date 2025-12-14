@@ -72,7 +72,7 @@
       </div>
 
       <!-- Submit -->
-      <button class="btn btn-dark btn-xl" type="submit">Send Message</button>
+      <button class="btn-custom" type="submit">Send Message</button>
     </form>
   </div>
 </div>

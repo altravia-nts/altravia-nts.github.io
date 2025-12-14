@@ -476,13 +476,13 @@ footer a:hover {
 /* Footer icons */
 footer i {
   margin-right: 8px;
-  color: #337ab7;           /* match brand accent */
+  color: #ff7f50;           /* match brand accent */
 }
 
 /* Divider line */
 footer hr.small {
-  border-color: #337ab7;    /* orange accent line */
-  max-width: 120px;
+  border-color: #ff7f50;    /* orange accent line */
+  max-width: 80px;
   margin: 20px auto;
 }
 
@@ -552,5 +552,5 @@ footer {
 }
 
 #mainNav .nav-link:hover {
-  color: #337ab7!important;    /* orange hover to match your button */
+  color: #ff7f50!important;    /* orange hover to match your button */
 }
