@@ -236,28 +236,37 @@ hr.small {
   flex: 1.2;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: center;   /* vertical center */
+  align-items: center;       /* horizontal center */
   padding: 60px;
-  /*background-color: #fdf5e6; /* light cream */
-  text-align: left;
+  background-color: #fdf5e6; /* light cream */
+  text-align: center;        /* center text alignment */
 }
 
+/* Make brand/title larger */
 .header-text h1 {
-  margin-bottom: 20px;
+  font-size: 3.5rem;   /* increase size */
+  font-weight: 700;    /* bold for emphasis */
+  margin-bottom: 25px;
 }
 
+/* Subtitle spacing */
 .header-text .subtitle {
+  font-size: 1.5rem;
   margin-bottom: 20px;
 }
 
+/* Description spacing */
 .header-text .site-description {
-  margin-bottom: 15px;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  max-width: 600px;    /* keep text nicely contained */
 }
 
-/* Book Now button with orange shade */
+/* Book Now button centered and compact */
 .btn-custom {
   display: inline-block;
-  padding: 6px 12px;   /* smaller padding */
+  padding: 8px 18px;   /* normal size */
   font-size: 1rem;
   border-radius: 4px;
   text-decoration: none;
@@ -265,11 +274,13 @@ hr.small {
   color: #fff;
   border: none;
   transition: background-color 0.3s ease;
+  margin-top: 15px;
 }
 
 .btn-custom:hover {
   background-color: #ff6600; /* deeper orange on hover */
 }
+
 
 /* Right side: image reduced and centered */
 .header-image {
@@ -461,7 +472,7 @@ footer {
 }
 
 #mainNav .nav-link {
-  color: #fff !important;       /* white text for contrast */
+  color:#fff !important;       /* white text for contrast */
   font-weight: 600;
 }
 
