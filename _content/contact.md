@@ -8,7 +8,7 @@
 
   <!-- Right Column: Contact Info / Form -->
   <div class="col-lg-9 text-start">
-    Whether you have a question about mentorship, want guidance on your master’s journey, or just want to connect, you can reach me using the form below.<br><br>
+    Have a question about mentorship, need guidance on your master’s journey, or simply wish to connect? I’d be glad to hear from you — just use the form below.<br><br>
 
     <form action="https://formspree.io/f/mvgeldby" method="POST">
       <div class="row">
