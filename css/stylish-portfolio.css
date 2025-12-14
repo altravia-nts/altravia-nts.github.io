@@ -453,3 +453,18 @@ footer {
   display: block;
 } */
 
+#mainNav {
+  display: block;              /* always visible */
+  background-color: #000;       /* solid black background */
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  transition: background-color 200ms linear;
+}
+
+#mainNav .nav-link {
+  color: #fff !important;       /* white text for contrast */
+  font-weight: 600;
+}
+
+#mainNav .nav-link:hover {
+  color: #ff7f50 !important;    /* orange hover to match your button */
+}
