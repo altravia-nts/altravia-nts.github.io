@@ -211,6 +211,9 @@ hr.small {
     transform: scale(1.1);
   }
 }
+.site-description {
+  color: #ffffff;   /* white font */
+}
 
 /* About */
 
