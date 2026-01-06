@@ -530,9 +530,12 @@ footer p.text-muted {
 */
 
 footer {
-  padding: 100px 0;
+  padding: 20px 0;
   background-color: #000; /* solid black background */
   color: #fff;            /* optional: makes text white for contrast */
+}
+footer .text-muted {
+  color: #fff !important; /* make copyright white */
 }
 
 
