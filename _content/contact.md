@@ -10,7 +10,11 @@
   <div class="col-lg-9 text-start">
     Have a question about mentorship, need guidance on your master’s journey, or simply wish to connect? I’d be glad to hear from you — just use the form below.<br><br>
 
+    {% if jekyll.environment == 'production' %}
     <form action="/api/submit" method="POST">
+    {% else %}
+    <form action="http://localhost:5000/api/submit" method="POST">
+    {% endif %}
       <div class="row">
         <!-- Name -->
         <div class="col-md-6">
