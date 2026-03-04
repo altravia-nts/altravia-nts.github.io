@@ -51,24 +51,94 @@ Message:
 
     if all([smtp_server, smtp_user, smtp_pass, destination_email]):
         try:
+            # HTML format for Admin
+            admin_html = f"""
+            <html>
+              <body style="font-family: Arial, sans-serif; background-color: #f4f7f6; padding: 20px;">
+                <div style="max-width: 600px; margin: auto; background-color: #ffffff; padding: 30px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+                  <h2 style="color: #333333; border-bottom: 2px solid #007bff; padding-bottom: 10px;">New Contact Request</h2>
+                  <p style="color: #555555; font-size: 16px;"><strong>Name:</strong> {name}</p>
+                  <p style="color: #555555; font-size: 16px;"><strong>Email:</strong> {email}</p>
+                  <p style="color: #555555; font-size: 16px;"><strong>Residence:</strong> {residence or 'N/A'}</p>
+                  <p style="color: #555555; font-size: 16px;"><strong>Phone:</strong> {phone or 'N/A'}</p>
+                  <p style="color: #555555; font-size: 16px;"><strong>Service Requested:</strong> {services}</p>
+                  <br>
+                  <h3 style="color: #333333;">Message:</h3>
+                  <div style="background-color: #f8f9fa; padding: 15px; border-left: 4px solid #007bff; color: #444444; white-space: pre-wrap;">
+                    {message}
+                  </div>
+                </div>
+              </body>
+            </html>
+            """
+            
+            # HTML format for User Acknowledgment
+            ack_html = f"""
+            <html>
+              <body style="font-family: Arial, sans-serif; background-color: #f4f7f6; padding: 20px;">
+                <div style="max-width: 600px; margin: auto; background-color: #ffffff; padding: 30px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+                  <div style="text-align: center; margin-bottom: 20px;">
+                    <h2 style="color: #007bff; margin: 0;">Thank You for Contacting Altravia</h2>
+                  </div>
+                  <p style="color: #555555; font-size: 16px; line-height: 1.6;">Hi <strong>{name}</strong>,</p>
+                  <p style="color: #555555; font-size: 16px; line-height: 1.6;">
+                    Thank you for reaching out to us regarding <strong>{services}</strong>. We have successfully received your message and our team will get back to you as soon as possible.
+                  </p>
+                  <br>
+                  <h3 style="color: #333333; text-align: left; font-size: 18px;">A copy of your message:</h3>
+                  <div style="background-color: #f8f9fa; padding: 15px; border-left: 4px solid #ced4da; color: #444444; white-space: pre-wrap;">
+                    {message}
+                  </div>
+                  <br>
+                  <p style="color: #888888; font-size: 14px; text-align: center; margin-top: 30px; border-top: 1px solid #eeeeee; padding-top: 15px;">
+                    Best regards,<br>
+                    <strong>The Altravia Team</strong>
+                  </p>
+                </div>
+              </body>
+            </html>
+            """
+            # Email 1: To the admin (You)
             msg = MIMEMultipart()
             msg['From'] = smtp_user
             msg['To'] = destination_email
             msg['Subject'] = f"New Contact Request from {name}"
             msg['Reply-To'] = email
 
-            msg.attach(MIMEText(submission_data, 'plain'))
+            msg.attach(MIMEText(admin_html, 'html'))
+
+            # Email 2: Acknowledgment to the user
+            ack_msg = MIMEMultipart()
+            ack_msg['From'] = smtp_user
+            ack_msg['To'] = email
+            ack_msg['Subject'] = "Thank you for contacting Altravia!"
+            
+            ack_msg.attach(MIMEText(ack_html, 'html'))
 
             server = smtplib.SMTP(smtp_server, int(smtp_port))
             server.starttls()
             server.login(smtp_user, smtp_pass)
             server.send_message(msg)
+            server.send_message(ack_msg)
             server.quit()
-            print("Email sent successfully!")
+            print("Emails sent successfully!")
         except Exception as e:
             print(f"Failed to send email: {e}")
-            # If email sending is critical, you might return an error here.
-            # return f"Error sending email: {e}", 500
+            error_html = """
+            <!DOCTYPE html>
+            <html>
+            <head><title>Error</title></head>
+            <body style="font-family: sans-serif; text-align: center; margin-top: 50px; background-color: #f8f9fa;">
+                <div style="max-width: 500px; margin: auto; padding: 20px; background: white; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                    <h2 style="color: #dc3545;">Oops! Something went wrong.</h2>
+                    <p>We couldn't submit your message at this time. Please check your email address and try again later.</p>
+                    <br>
+                    <a href="/" style="display: inline-block; padding: 10px 20px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px;">&larr; Try Again</a>
+                </div>
+            </body>
+            </html>
+            """
+            return render_template_string(error_html), 500
     else:
         print("SMTP environment variables are not fully configured. Skipping email send.")
 
