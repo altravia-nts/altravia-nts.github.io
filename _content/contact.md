@@ -10,7 +10,7 @@
   <div class="col-lg-9 text-start">
     Have a question about mentorship, need guidance on your master’s journey, or simply wish to connect? I’d be glad to hear from you — just use the form below.<br><br>
 
-    <form action="https://formspree.io/f/mvgeldby" method="POST">
+    <form action="/api/submit" method="POST">
       <div class="row">
         <!-- Name -->
         <div class="col-md-6">
