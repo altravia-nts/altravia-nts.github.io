@@ -1,5 +1,11 @@
 source "https://rubygems.org"
 
-ruby "3.3.0"
+ruby "3.2.3"
 
-gem "github-pages", group: :jekyll_plugins
+gem "jekyll", "~> 4.3"
+
+group :jekyll_plugins do
+  gem "jekyll-feed"
+  gem "jekyll-seo-tag"
+  gem "jekyll-sitemap"
+end
