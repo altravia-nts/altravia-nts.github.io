@@ -1,3 +1,4 @@
+# encoding: utf-8
 <h2 style="font-weight: 700;">Welcome to AltraVia</h2>
 <!--<h2>Welcome to AltraVia</h2>
 <p class="lead">I'm Neema, and I help students like you navigate the path to a successful master's degree and career in Europe.</p>-->
