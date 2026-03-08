@@ -9,8 +9,16 @@ app = Flask(__name__)
 # Enable CORS to accept requests from the frontend domain
 CORS(app)
 
-@app.route('/api/submit', methods=['POST'])
+@app.route('/api/', methods=['GET'])
+@app.route('/api/index', methods=['GET'])
+def api_status():
+    return jsonify({"status": "success", "message": "API is running. Send a POST request to /api/submit to use the contact form."})
+
+@app.route('/api/submit', methods=['GET', 'POST'])
 def submit_form():
+    if request.method == 'GET':
+        return jsonify({"error": "Method Not Allowed. Please send a POST request to submit the form."}), 405
+
     name = request.form.get('name')
     # The form input uses name="_replyto"
     email = request.form.get('_replyto')
