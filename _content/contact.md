@@ -1,3 +1,4 @@
+# encoding: utf-8
 <h2>Let’s Get in Touch</h2>
 
 <div class="row">
