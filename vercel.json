@@ -1,6 +1,11 @@
 {
   "buildCommand": "export LANG=en_US.UTF-8 && export LC_ALL=en_US.UTF-8 && export JEKYLL_ENV=production && bundle install && bundle exec jekyll build",
   "outputDirectory": "_site",
+  "functions": {
+    "api/index.py": {
+      "runtime": "vercel-python@0.7.4"
+    }
+  },
   "rewrites": [
     {
       "source": "/api/(.*)",
