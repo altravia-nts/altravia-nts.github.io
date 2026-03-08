@@ -162,6 +162,3 @@ Message:
 # For local testing only. Vercel automatically handles execution in production.
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
-
-# Vercel serverless entry point
-handler = app
