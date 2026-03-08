@@ -1,9 +1,5 @@
-source 'https://rubygems.org'
+source "https://rubygems.org"
+
+ruby "3.3.0"
 
 gem "github-pages", group: :jekyll_plugins
-
-# If you have other plugins, you can add them here:
-# group :jekyll_plugins do
-#   gem "jekyll-sitemap"
-#   gem "jekyll-seo-tag"
-# end
