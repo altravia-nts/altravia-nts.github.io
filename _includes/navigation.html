@@ -1,17 +1,9 @@
-<nav id="mainNav" class="navbar navbar-expand-lg navbar-dark fixed-top">
+<nav id="mainNav" class="navbar navbar-expand-lg navbar-light fixed-top">
   <div class="container-fluid">
-    <a class="navbar-brand page-scroll" href="/"
-      >{{ site.title }}</a
-    >
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#bs-example-navbar-collapse-1"
-      aria-controls="bs-example-navbar-collapse-1"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
+    <a class="navbar-brand page-scroll" href="/">{{ site.title }}</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+      data-bs-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false"
+      aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
@@ -19,18 +11,21 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav ms-auto">
         <li class="nav-item">
-          <a class="nav-link" href="/#about"><strong>About</strong></a>
+          <a class="nav-link"
+            href="{% if page.layout == 'front' %}#about{% else %}/#about{% endif %}"><strong>About</strong></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/#services"><strong>Services</strong></a>
+          <a class="nav-link"
+            href="{% if page.layout == 'front' %}#services{% else %}/#services{% endif %}"><strong>Services</strong></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link{% if page.url == '/offerings/' %} active{% endif %}" href="/offerings/"><strong>Details</strong></a>
+          <a class="nav-link{% if page.url == '/offerings/' %} active{% endif %}"
+            href="/offerings/"><strong>Details</strong></a>
         </li>
         <!-- Contact Link -->
         <li class="nav-item">
-          <a class="nav-link" href="/#contact"><strong>Contant Us</strong></a>
-        </li>
+          <a class="nav-link"
+            href="{% if page.layout == 'front' %}#contact{% else %}/#contact{% endif %}"><strong>Contact Us</strong></a>
         </li>
       </ul>
     </div>
