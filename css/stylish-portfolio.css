@@ -19,7 +19,8 @@ html {
 }
 
 body {
-  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: var(--bs-body-bg);
 }
 
 .text-vertical-center {
@@ -39,11 +40,14 @@ body {
 
 .btn {
   transition: all 0.3s ease-in-out;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  font-weight: 500;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
 .btn:hover {
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
 .btn-dark {
@@ -300,22 +304,27 @@ hr.small {
 /* Book Now button centered and compact */
 .btn-custom {
   display: inline-block;
-  padding: 8px 18px;
-  /* normal size */
-  font-size: 1rem;
-  border-radius: 4px;
+  padding: 10px 24px;
+  /* larger size for hero */
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 8px;
   text-decoration: none;
-  background-color: #337ab7;
-  /* coral orange */
+  background-color: var(--bs-primary);
+  /* modern blue */
   color: #fff;
   border: none;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
   margin-top: 15px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
 .btn-custom:hover {
-  background-color: #fc7c05;
-  /* deeper orange on hover */
+  background-color: #4338ca;
+  /* deeper indigo on hover */
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  color: #fff;
 }
 
 
@@ -389,24 +398,35 @@ hr.small {
 
 }
 
-/* Services */
-
 .services {
-  padding: 50px 0;
-
+  padding: 80px 0;
+  background-color: var(--bs-body-bg);
+  /* Use light grey instead of primary bg */
 }
 
 .service-item {
-  padding: 30px 20px;
-  border-radius: 8px;
+  padding: 40px 30px;
+  border-radius: 12px;
+  background-color: #fff;
   transition: all 0.3s ease-in-out;
   height: -webkit-fill-available;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  margin-bottom: 25px;
 }
 
 .service-item:hover {
-  transform: translateY(-10px);
-  background-color: rgba(255, 255, 255, 0.1);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.service-item h4 {
+  font-weight: 700;
+  margin: 15px 0;
+}
+
+.service-item .btn-light {
+  border: 1px solid #e5e7eb;
 }
 
 /* Callout */
@@ -571,26 +591,28 @@ footer p.text-muted {
 
 footer {
   padding: 20px 0;
-  background-color: #000;
-  /* solid black background */
-  color: #fff;
-  /* optional: makes text white for contrast */
+  background-color: #111827;
+  /* slate dark navy background */
+  color: #f3f4f6;
+  /* light gray for contrast */
 }
 
 footer .text-muted {
-  color: #fff !important;
-  /* make copyright white */
+  color: #9ca3af !important;
+  /* subtle gray */
 }
 
-
 :root {
-  --bs-primary-rgb: 51, 122, 183;
-  --bs-body-bg: #f8f9fa;
+  --bs-primary: #4f46e5;
+  /* Modern Indigo */
+  --bs-primary-rgb: 79, 70, 229;
+  --bs-body-bg: #f8fafc;
+  /* Modern soft gray */
 }
 
 .bg-primary {
   color: #fff !important;
-  background-color: #337ab7 !important;
+  background-color: var(--bs-primary) !important;
 }
 
 .div-center {
@@ -628,9 +650,10 @@ footer .text-muted {
 #mainNav {
   display: block;
   /* always visible */
-  background-color: #000;
-  /* solid black background */
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  background-color: rgba(17, 24, 39, 0.95);
+  /* slate dark with slight transparency */
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   transition: background-color 200ms linear;
 }
 
