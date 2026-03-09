@@ -53,16 +53,11 @@ Message:
 
     # --- Email Sending Logic ---
     # Fetch environment variables
-    # smtp_server = os.environ.get('SMTP_SERVER')
-    # smtp_port = os.environ.get('SMTP_PORT', 587)  # Default to 587 (TLS)
-    # smtp_user = os.environ.get('SMTP_USER')
-    # smtp_pass = os.environ.get('SMTP_PASS')
-    # destination_email = os.environ.get('DESTINATION_EMAIL')
-    smtp_server = "smtp.gmail.com"
-    smtp_port = 587  # Default to 587 (TLS)
-    smtp_user = "anooj.sathyan11@gmail.com"
-    smtp_pass = "bjse vvbr hgoq heah"
-    destination_email = "anooj.sathyan11@gmail.com"
+    smtp_server = os.environ.get('SMTP_SERVER')
+    smtp_port = os.environ.get('SMTP_PORT', 587)  # Default to 587 (TLS)
+    smtp_user = os.environ.get('SMTP_USER')
+    smtp_pass = os.environ.get('SMTP_PASS')
+    destination_email = os.environ.get('DESTINATION_EMAIL')
 
     if all([smtp_server, smtp_user, smtp_pass, destination_email]):
         try:
@@ -93,7 +88,7 @@ Message:
               <body style="font-family: Arial, sans-serif; background-color: #f4f7f6; padding: 20px;">
                 <div style="max-width: 600px; margin: auto; background-color: #ffffff; padding: 30px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
                   <div style="text-align: center; margin-bottom: 20px;">
-                    <h2 style="color: #007bff; margin: 0;">Thank You for Contacting Altravia</h2>
+                    <h2 style="color: #007bff; margin: 0;">Thank You for Contacting AltraVia</h2>
                   </div>
                   <p style="color: #555555; font-size: 16px; line-height: 1.6;">Hi <strong>{name}</strong>,</p>
                   <p style="color: #555555; font-size: 16px; line-height: 1.6;">
@@ -107,7 +102,7 @@ Message:
                   <br>
                   <p style="color: #888888; font-size: 14px; text-align: center; margin-top: 30px; border-top: 1px solid #eeeeee; padding-top: 15px;">
                     Best regards,<br>
-                    <strong>The Altravia Team</strong>
+                    <strong>The AltraVia Team</strong>
                   </p>
                 </div>
               </body>
@@ -126,7 +121,7 @@ Message:
             ack_msg = MIMEMultipart()
             ack_msg['From'] = smtp_user
             ack_msg['To'] = email
-            ack_msg['Subject'] = "Thank you for contacting Altravia!"
+            ack_msg['Subject'] = "Thank you for contacting AltraVia!"
             
             ack_msg.attach(MIMEText(ack_html, 'html'))
 
@@ -155,7 +150,22 @@ Message:
             """
             return render_template_string(error_html), 500
     else:
-        print("SMTP environment variables are not fully configured. Skipping email send.")
+      print("SMTP environment variables are not fully configured. Skipping email send.")
+      error_html = """
+          <!DOCTYPE html>
+          <html>
+          <head><title>Error</title></head>
+          <body style="font-family: sans-serif; text-align: center; margin-top: 50px; background-color: #f8f9fa;">
+              <div style="max-width: 500px; margin: auto; padding: 20px; background: white; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                  <h2 style="color: #dc3545;">Oops! Something went wrong.</h2>
+                  <p>We couldn't submit your message at this time. Please check your email address and try again later.</p>
+                  <br>
+                  <a href="/" style="display: inline-block; padding: 10px 20px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px;">&larr; Try Again</a>
+              </div>
+          </body>
+          </html>
+          """
+      return render_template_string(error_html), 500
 
     # Return a success page to the user
     html = """

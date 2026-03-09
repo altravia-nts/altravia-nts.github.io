@@ -11,9 +11,9 @@
     Have a question about mentorship, need guidance on your master’s journey, or simply wish to connect? I’d be glad to hear from you — just use the form below.<br><br>
 
     {% if jekyll.environment == 'production' %}
-    <form action="/api/submit" method="POST">
+    <form id="contactForm" action="/api/submit" method="POST">
     {% else %}
-    <form action="http://localhost:5000/api/submit" method="POST">
+    <form id="contactForm" action="http://localhost:5000/api/submit" method="POST">
     {% endif %}
       <div class="row">
         <!-- Name -->
@@ -50,7 +50,10 @@
           <div class="mb-3">
             <label for="phone" class="form-label">Phone Number</label>
             <input type="tel" name="phone" class="form-control" id="phone" 
-                   placeholder="+49 123 456789">
+                   placeholder="+49 123 456789"
+                   pattern="^\+?[0-9\s\-\(\)]+$"
+                   title="Please enter a valid phone number (numbers, spaces, and + - ( ) only)"
+                   oninput="this.value = this.value.replace(/[^0-9\+\-\s\(\)]/g, '');">
           </div>
         </div>
       </div>
@@ -80,3 +83,57 @@
     </form>
   </div>
 </div>
+
+<!-- Loading Overlay UI -->
+<div id="loadingOverlay">
+  <div class="spinner"></div>
+  <div class="loading-text">Sending message...</div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const form = document.getElementById('contactForm');
+  const overlay = document.getElementById('loadingOverlay');
+
+  if (form) {
+    form.addEventListener('submit', function(e) {
+      // Prevent standard browser form submission
+      e.preventDefault();
+      
+      // Show loading overlay
+      overlay.classList.add('active');
+
+      // Create form data 
+      const formData = new URLSearchParams(new FormData(form));
+      const url = form.getAttribute('action');
+
+      // Send the request via fetch API
+      fetch(url, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: formData.toString()
+      })
+      .then(response => {
+        if (!response.ok) {
+           throw new Error('Network response was not ok');
+        }
+        return response.text(); 
+      })
+      .then(html => {
+        // Success: the server returns an HTML success page. Render it to the current window.
+        document.open();
+        document.write(html);
+        document.close();
+      })
+      .catch(error => {
+        // Hide overlay on error and show alert
+        overlay.classList.remove('active');
+        alert("Sorry, an error occurred while sending your message. Please try again.");
+        console.error('Error submitting form:', error);
+      });
+    });
+  }
+});
+</script>
