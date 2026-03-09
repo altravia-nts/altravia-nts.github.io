@@ -9,33 +9,23 @@
           {{ address.line }}<br>
           {% endfor %}
         </p> -->
-        <ul class="list-unstyled">
-          <!--<li><i class="fa fa-phone fa-fw"></i> {{ site.telephone }}</li>-->
-          <li><i class="fa fa-envelope fa-fw"></i>
-            <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+
+        <br>
+        <a href="mailto:{{ site.email }}" class="text-decoration-none text-light px-2">
+          <i class="fa fa-envelope fa-fw"></i> <span class="fs-6">{{ site.email }}</span>
+        </a>
+        <ul class="list-unstyled d-flex flex-wrap justify-content-center align-items-center gap-4 mb-4 mt-3 fs-5">
+          <li>
+            <a href="https://instagram.com/altraviants" target="_blank" class="text-decoration-none text-light px-2"
+              title="Instagram">
+              <i class="fab fa-instagram fa-fw"></i> <span class="fs-6">@altraviants</span>
           </li>
           <li>
-            <a href="https://instagram.com/altraviants" target="_blank">
-              <img src="/assets/img/instagram-icon.png" alt="Instagram" style="width:24px; height:24px;">
+            <a href="https://wa.me/15565799352" class="text-decoration-none text-light px-2">
+              <i class="fab fa-whatsapp fa-fw"></i> <span class="fs-6">+49 15565799352</span>
             </a>
           </li>
-          <li><i class="fa fa-whatsapp fa-fw"></i>
-            <a href="https://wa.me/15565799352">+49 15565799352</a>
-          </li>
-
         </ul>
-        <br>
-        <!-- <ul class="list-inline">
-          <li>
-            <a href="https://facebook.com/{{ site.facebook_username }}"><i class="fa fa-facebook fa-fw fa-3x"></i></a>
-          </li>
-          <li>
-            <a href="https://twitter.com/{{ site.twitter_username }}"><i class="fa fa-twitter fa-fw fa-3x"></i></a>
-          </li>
-          <li>
-            <a href="https://github.com/{{ site.github_username }}"><i class="fa fa-github fa-fw fa-3x"></i></a>
-          </li>
-        </ul> -->
         <hr class="small div-center">
         <p class="text-muted">Copyright &copy; {{ site.time | date: '%Y' }} AltraVia, All rights reserved. Powered by
           AltraVia.
