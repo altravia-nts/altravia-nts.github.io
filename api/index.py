@@ -53,11 +53,16 @@ Message:
 
     # --- Email Sending Logic ---
     # Fetch environment variables
-    smtp_server = os.environ.get('SMTP_SERVER')
-    smtp_port = os.environ.get('SMTP_PORT', 587)  # Default to 587 (TLS)
-    smtp_user = os.environ.get('SMTP_USER')
-    smtp_pass = os.environ.get('SMTP_PASS')
-    destination_email = os.environ.get('DESTINATION_EMAIL')
+    # smtp_server = os.environ.get('SMTP_SERVER')
+    # smtp_port = os.environ.get('SMTP_PORT', 587)  # Default to 587 (TLS)
+    # smtp_user = os.environ.get('SMTP_USER')
+    # smtp_pass = os.environ.get('SMTP_PASS')
+    # destination_email = os.environ.get('DESTINATION_EMAIL')
+    smtp_server = "smtp.gmail.com"
+    smtp_port = 587  # Default to 587 (TLS)
+    smtp_user = "anooj.sathyan11@gmail.com"
+    smtp_pass = "bjse vvbr hgoq heah"
+    destination_email = "anooj.sathyan11@gmail.com"
 
     if all([smtp_server, smtp_user, smtp_pass, destination_email]):
         try:
