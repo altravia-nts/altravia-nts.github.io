@@ -28,10 +28,27 @@ def submit_form():
     phone = request.form.get('phone')
     services = request.form.get('services')
     message = request.form.get('message')
+    company_website = request.form.get('company_website')
+
+    # Anti-Spam: Honeypot check
+    # If the hidden field is filled, it's a bot.
+    if company_website:
+        return "Spam detected.", 403
 
     # Basic validation
     if not all([name, email, services, message]):
         return "Missing mandatory fields.", 400
+
+    # Anti-Spam: Basic Keyword & Link filtering
+    spam_keywords = ["bange", "backpacks", "sling bags", "seo services", "crypto", "viagra", "casino", "marketing services"]
+    message_lower = message.lower()
+    if any(keyword in message_lower for keyword in spam_keywords):
+        return "Spam detected based on content.", 403
+    
+    # Block if message contains multiple URLs (spam bots usually send many links)
+    url_count = message_lower.count("http://") + message_lower.count("https://")
+    if url_count > 1:
+        return "Message contains too many links.", 403
 
     # Format the message for the email body
     submission_data = f"""New Contact Form Submission:

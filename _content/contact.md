@@ -8,13 +8,22 @@
 
   <!-- Right Column: Contact Info / Form -->
   <div class="col-lg-9 text-start">
-    Have a question about mentorship, need guidance on your master’s journey, or simply wish to connect? I’d be glad to hear from you — just use the form below.<br><br>
+    <p>
+      I am Neema Tharayil Salim, founder of AltraVia. My mission is to empower biomedical aspirants to explore opportunities in higher education and professional careers. I hold a bachelor’s degree in Biomedical Engineering and earned a fully funded merit‑based scholarship to pursue my master’s in Bionics Engineering, specializing in Medical Robotics, at the University of Pisa and Scuola Superiore Sant’Anna in Italy. Currently, I work as a System Test Engineer in a German medical robotics company. My objective is to share my experience to guide, inspire, and support the next generation of biomedical professionals - helping them build confident careers and seize opportunities worldwide.
+    </p>
+    <p>Have a question about mentorship, need guidance on your master’s journey, or simply wish to connect? I’d be glad to hear from you — just use the form below.<br><br></p>
 
     {% if jekyll.environment == 'production' %}
     <form id="contactForm" action="/api/submit" method="POST">
     {% else %}
     <form id="contactForm" action="http://localhost:5000/api/submit" method="POST">
     {% endif %}
+      <!-- Honeypot Field (Anti-Spam) -->
+      <div style="display:none;">
+        <label for="company_website">Company Website</label>
+        <input type="text" name="company_website" id="company_website" tabindex="-1" autocomplete="off">
+      </div>
+
       <div class="row">
         <!-- Name -->
         <div class="col-md-6">
