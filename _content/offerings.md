@@ -5,7 +5,7 @@ layout: page
 ---
 
 <h2 id="study-planning"><i class="fas fa-graduation-cap me-3"></i>Study in Europe</h2>
-Europe offers incredible opportunities for biomedical students, but choosing the right country, university, and program can be overwhelming. Through AltraVia, I provide personalized mentorship — guiding biomedical aspirants to plan their master’s journey based on your profile, shortlist universities, and select programs that match their interests, potential, and career goals.
+Europe offers incredible opportunities for STEM students, but choosing the right country, university, and program can be overwhelming. Through AltraVia, I provide personalized mentorship — guiding STEM aspirants to plan their master’s journey based on your profile, shortlist universities, and select programs that match their interests, potential, and career goals.
 
 <hr class="my-5">
 
@@ -20,7 +20,7 @@ Crafting a strong CV and cover letter (or Statement of Purpose) is essential for
 <hr class="my-5">
 
 <h2 id="internship-support"><i class="fas fa-magnifying-glass me-3"></i>Internship & Job Application Assistance</h2>
-At AltraVia, guidance is provided to biomedical aspirants in identifying suitable internships and job opportunities in India and across Europe. Support includes shortlisting options, preparing strong applications, and developing interview strategies - ensuring that candidates are equipped to pursue opportunities that align with their skills and career goals.
+At AltraVia, guidance is provided to STEM aspirants in identifying suitable internships and job opportunities in India and across Europe. Support includes shortlisting options, preparing strong applications, and developing interview strategies - ensuring that candidates are equipped to pursue opportunities that align with their skills and career goals.
 
 <hr class="my-5">
 
