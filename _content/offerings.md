@@ -5,12 +5,12 @@ layout: page
 ---
 
 <h2 id="study-planning"><i class="fas fa-graduation-cap me-3"></i>Study in Europe</h2>
-Europe offers incredible opportunities for STEM students, but choosing the right country, university, and program can be overwhelming. Through AltraVia, I provide personalized mentorship — guiding STEM aspirants to plan their master’s journey based on your profile, shortlist universities, and select programs that match their interests, potential, and career goals.
+Europe offers incredible opportunities for STEM students, but choosing the right country, university, and program can be overwhelming. Through AltraVia, I provide personalized mentorship - guiding STEM aspirants to plan their master’s journey based on your profile, shortlist universities, and select programs that match their interests, potential, and career goals.
 
 <hr class="my-5">
 
 <h2 id="scholarship-support"><i class="fas fa-award me-3"></i>Scholarship Assistance</h2>
-Did you know that countries like Italy offer excellent funding opportunities for master’s degrees — allowing you to focus fully on your studies without relying on part‑time jobs? Many universities across Europe provide scholarships, and while competition is real, with genuine motivation and hard work these opportunities are within reach. Through AltraVia, my mission is to introduce you to these possibilities and guide you through the entire process — from identifying scholarships to crafting strong applications.
+Did you know that countries like Italy offer excellent funding opportunities for master’s degrees - allowing you to focus fully on your studies without relying on part‑time jobs? Many universities across Europe provide scholarships, and while competition is real, with genuine motivation and hard work these opportunities are within reach. Through AltraVia, my mission is to introduce you to these possibilities and guide you through the entire process - from identifying scholarships to crafting strong applications.
 
 <hr class="my-5">
 
