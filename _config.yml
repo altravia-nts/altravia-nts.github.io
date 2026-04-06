@@ -1,9 +1,9 @@
 # Site settings
 title: AltraVia 
-subtitle: "Your gateway to biomedical careers and study abroad opportunities"
+subtitle: "Your gateway to STEM (Science, Technology, Engineering & Mathematics) careers and study abroad opportunities"
 email: altraviants@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-    Mentoring biomedical aspirants to explore higher studies, research, internships, and career opportunities in India and Europe.
+    Mentoring STEM aspirants to explore higher studies, research, internships, and career opportunities in India and Europe.
     Book your free consultation now.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://altraviants.org" # the base hostname & protocol for your site
@@ -33,3 +33,4 @@ exclude:
   - api
   - vercel.json
   - requirements.txt
+  
